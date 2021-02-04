@@ -18,8 +18,7 @@ int main(void)
 	u = n % 10;
 	if (u > 5)
 	{
-		printf("%s %d %s %d %s %s", "Last digit of", n, "is", u, "and", \
-		       "is greater than 5\n");
+		printf("%s %d %s %d %s %s", "Last digit of", n, "is", u, "and is greater", "than 5\n");
 	}
 	if (u == 0)
 	{
@@ -27,8 +26,7 @@ int main(void)
 	}
 	if (u < 6 && u != 0)
 	{
-		printf("%s %d %s %d %s %s", "Last digit of", n, "is", u, "and", \
-		       "is less than 6 and not 0\n");
+		printf("%s %d %s %d %s %s", "Last digit of", n, "is", u, "and", "is less than 6 and not 0\n");
 	}
 	return (0);
 }
