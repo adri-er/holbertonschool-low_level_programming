@@ -10,11 +10,12 @@
  */
 void print_format(int index)
 {
-	int cant, c_var, c_var2;
+	int cant, c_var, c_var2, n_dig, n;
 
 	c_var = index;
 	c_var2 = index;
 	cant = 1;
+	n_dig = 0;
 	if (index < 0)
 	{
 		_putchar('-');
@@ -25,14 +26,14 @@ void print_format(int index)
 		{
 			cant = cant * 10;
 			c_var = c_var / 10;
+			n_dig += 1;
 		}
-		while (abs(c_var2 / 10) > 0)
+		for (n = 0; n <= n_dig; n++)
 		{
 			_putchar(abs(c_var2 / cant) + '0');
 			c_var2 = c_var2 % cant;
 			cant = cant / 10;
 		}
-		_putchar(c_var2 + '0');
 	}
 	else
 	{
