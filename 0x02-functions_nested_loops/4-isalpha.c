@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "holberton.h"
-#include <ctype.h>
 
 /**
  *_isalpha - Function that checks if its an alphabetic character
@@ -12,13 +10,13 @@ int _isalpha(int c)
 {
 	int rsp;
 
-	if (isalpha(c) != 0)
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
 	{
 		rsp = 1;
 	}
 	else
 	{
-		rsp = isalpha(c);
+		rsp = 0;
 	}
 	return (rsp);
 }
