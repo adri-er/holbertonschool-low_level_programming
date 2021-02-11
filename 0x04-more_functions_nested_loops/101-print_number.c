@@ -7,9 +7,9 @@
  *
  * Return: None
  */
-void print_number(int n)
+void print_number(long int n)
 {
-	int cant, c_var, c_var2, n_dig, num;
+	long int cant, c_var, c_var2, n_dig, num;
 
 	c_var = n;
 	c_var2 = n;
