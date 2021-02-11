@@ -8,7 +8,7 @@
 void print_times_table(int n)
 {
 	int n1, n2, prod, cant, i;
-	char[] prodc;
+	char prodc[];
 
 	for (n1 = 0; n1 <= n; n1++)
 	{
