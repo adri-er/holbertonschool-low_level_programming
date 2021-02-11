@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * print_number - print number given by parameter 
+ * print_number - print number given by parameter
  * @n: number to be printed
  *
  * Return: None
@@ -10,7 +10,7 @@
 void print_number(int n)
 {
 	int cant, c_var, c_var2, n_dig, num;
-	
+
 	c_var = n;
 	c_var2 = n;
 	cant = 1;
