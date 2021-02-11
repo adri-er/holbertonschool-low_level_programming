@@ -10,10 +10,13 @@ int _isupper(int c)
 {
 	int resp;
 
-	resp = 0;
 	if (c >= 41 && c <= 90)
 	{
 		resp = 1;
+	}
+	else
+	{
+		resp = 0;
 	}
 	return (resp);
 }

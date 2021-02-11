@@ -10,6 +10,10 @@ void print_triangle(int size)
 {
 	int fila, sim, esp;
 
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
 	for (fila = 1; fila <= size; fila++)
 	{
 		for (esp = size - fila; esp > 0; esp--)
