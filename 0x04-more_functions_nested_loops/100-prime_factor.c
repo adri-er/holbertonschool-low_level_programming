@@ -12,7 +12,7 @@ int main(void)
 {
 	long int numero, i, resp;
 
-	numero = 612852475143;
+	numero = 1231952;
 	for (i = 1; i <= numero; i++)
 	{
 		if (numero % i == 0)
@@ -35,7 +35,7 @@ int main(void)
  */
 int prime(int a)
 {
-	long int index;
+	int index;
 
 	for (index = 2; index < a; index++)
 	{
