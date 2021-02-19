@@ -20,6 +20,10 @@ char *cap_string(char *stg)
 			{
 				pos = i + 1;
 				stg[pos] = stg[pos] - 32;
+				if (stg[i] == '\t')
+				{
+					stg[i] = ' ';
+				}
 			}
 		}
 	}
