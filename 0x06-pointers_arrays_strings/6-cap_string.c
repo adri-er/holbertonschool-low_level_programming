@@ -14,7 +14,11 @@ char *cap_string(char *stg)
 
 	for (; stg[i] != '\0'; i++)
 	{
-		for (j = 0; j < 16; j++)
+		if (stg[0] > 96 && stg[0] < 123)
+		{
+			stg[0] = stg[0] - 32;
+		}
+		for (j = 0; j < 14; j++)
 		{
 			if (stg[i] == sep[j] && stg[i + 1] > 96 && stg[i + 1] < 123)
 			{
