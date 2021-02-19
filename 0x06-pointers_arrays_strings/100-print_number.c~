@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	unsigned int numpos, cant, c_var, c_var2, n_dig, num;
-
+  
 	if (n < 0)
 	{
 		_putchar('-');
