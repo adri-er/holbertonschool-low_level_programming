@@ -3,7 +3,7 @@
 
 /**
  * print_diagsums - prints sum of the diagonals.
- * @a: matrix in memory as arrays. 
+ * @a: matrix in memory as arrays.
  * @size: size of each array.
  *
  * Return: None.
@@ -17,7 +17,7 @@ void print_diagsums(int *a, int size)
 
 	for (n = 0; n < size; n++)
 	{
- 		sum += a[d1];
+		sum += a[d1];
 		sum2 += a[d2];
 		d1 += (1 + size);
 		d2 += (size - 1);
