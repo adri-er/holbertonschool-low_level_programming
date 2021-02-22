@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 {
 	int index, len = 0;
 
-	for (; len != '\0'; len++)
+	for (; s[len] != '\0'; len++)
 	{
 	}
 	len++;
