@@ -28,7 +28,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 			if (coinc == len)
 			{
-				return (haystack + i);
+				return (needle);
 			}
 		}
 	}
