@@ -10,16 +10,20 @@
  */
 char *_strchr(char *s, char c)
 {
-	int index = 0;
-	char *f_coinc = NULL;
+	int index, len = 0;
+
+	for (; len != '\0'; len++)
+	{
+	}
+	len++;
 
 	for (; s[index]; index++)
 	{
 		if (s[index] == c)
 		{
-			f_coinc = s + index;
-			break;
+			return (s + index);
 		}
 	}
-	return (f_coinc);
+
+	return (s + len);
 }
