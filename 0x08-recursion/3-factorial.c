@@ -1,13 +1,23 @@
 #include "holberton.h"
 
 /**
- * func - .
+ * factorial - calculates factorial of a number.
+ * @n: number to calculate factorial.
  *
- *
- * Return:  .
+ * Return: factorial of n.
  */
-prototype
+int factorial(int n)
 {
-
-
+	if (n < 0)
+	{
+		return (-1);
+	}
+	else if (n == 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return (n * factorial(n - 1));
+	}
 }
