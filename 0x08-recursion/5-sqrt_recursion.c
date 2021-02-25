@@ -11,9 +11,9 @@ int _sqrt(int num, int count)
 {
 	if (count * count != num)
 	{
-		if (count > 0)
+		if (count < num)
 		{
-			return (_sqrt(num, count - 1));
+			return (_sqrt(num, count + 1));
 		}
 		else
 		{
@@ -35,5 +35,9 @@ int _sqrt(int num, int count)
  */
 int _sqrt_recursion(int n)
 {
-	return (_sqrt(n, n));
+	if (n < 1)
+	{
+		return (-1);
+	}
+	return (_sqrt(n, 1));
 }
