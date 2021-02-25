@@ -21,6 +21,10 @@ int is_prime_number(int);
 
 int is_prime(int, int);
 
+char * last(char *);
+
+int comp(char *, char *);
+
 int is_palindrome(char *);
 
 #endif
