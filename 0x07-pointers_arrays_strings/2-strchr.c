@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -16,7 +16,7 @@ char *_strchr(char *s, char c)
 	{
 	}
 
-	for (; index <= len; index++)
+	for (index = 0; index <= len; index++)
 	{
 		if (s[index] == c)
 		{
