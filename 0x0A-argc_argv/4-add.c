@@ -1,6 +1,8 @@
-#include "holberton.h"
+BB#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+int check(char *a);
 
 /**
  * main - adds positive numbers.
@@ -15,7 +17,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) == 0 && *argv[i] != '0')
+		if (check(argv[i]) == 0)
 		{
 			printf("Error\n");
 			return (1);
@@ -26,4 +28,29 @@ int main(int argc, char *argv[])
 	printf("%d\n", sum);
 
 	return (0);
+}
+
+/**
+ * check - checks if a number can be converted.
+ * @a: vector of strings in arguments.
+ *
+ * Return: 1 if its convertable, 0 if not.
+ */
+int check(char *a)
+{
+	int i = 0, resp = 0;
+
+	while (a[i] != '\0')
+	{
+		if (a[i] > 47 && a[i] < 58)
+		{
+			resp = 1;
+		}
+		else
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (resp);
 }
