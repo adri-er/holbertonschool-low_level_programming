@@ -1,8 +1,8 @@
-BB#include "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-int check(char *a);
+int check(char *);
 
 /**
  * main - adds positive numbers.
