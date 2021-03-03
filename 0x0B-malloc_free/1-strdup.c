@@ -24,6 +24,7 @@ char *_strdup(char *str)
 		{
 			memory[index] = str[index];
 		}
+		memory[index] = '\0';
 	}
 	return (memory);
 }
