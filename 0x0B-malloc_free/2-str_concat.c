@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,19 +11,35 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int index_s1, index_s2;
+	int index_s1, index_s2, len_s1 = 0, len_s2 = 0;
 	char *memory;
 
-	memory = (char *)malloc(sizeof(s1) + sizeof(s2) - 1);
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	while (s1[len_s1])
+	{
+		len_s1++;
+	}
+	while (s2[len_s2])
+	{
+		len_s2++;
+	}
+	memory = malloc((len_s1 + len_s2) * sizeof(char) + 1);
 	if (memory == NULL)
 	{
 		return (NULL);
 	}
-	for (index_s1 = 0; s1[index_s1]; index_s1++)
+	for (index_s1 = 0; index_s1 < len_s1; index_s1++)
 	{
 		memory[index_s1] = s1[index_s1];
 	}
-	for (index_s2 = 0; s2[index_s2]; index_s2++)
+	for (index_s2 = 0; index_s2 < len_s2 ; index_s2++)
 	{
 		memory[index_s1 + index_s2] = s2[index_s2];
 	}
