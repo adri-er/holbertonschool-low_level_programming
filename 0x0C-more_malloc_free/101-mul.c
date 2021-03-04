@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 		memory[size - index] = (value % 10 + '0');
 		value = value / 10;
 	}
-	memory[index] = '\n';
+	memory[index] = '\0';
 	printm(memory);
 	free(memory);
 	return (0);
@@ -62,7 +62,7 @@ void printm(char *str)
 	{
 		_putchar(str[index]);
 	}
-	_putchar('\0');
+	_putchar('\n');
 }
 
 /**
