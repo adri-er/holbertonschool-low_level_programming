@@ -2,44 +2,86 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void printm(char *);
+int check(char *);
+
 /**
- * alloc_grid - returns a pointer to a 2 dimensional array of integers.
- * @width: width of the array of integers done.
- * @height: height of the array of integers.
+ * main - multiplies two positive numbers.
+ * @argc: amount of arguments.
+ * @argv: values of each argument introduced.
  *
- * Return: NULL on failure or if w and h are 0 or pointer to array.
+ * Return: 0 if works, 1 any other case.
  */
-int **alloc_grid(int width, int height)
+int main(int argc, char *argv[])
 {
-	int index, index_j;
-	int **memory;
+	char *memory;
+	char *s = "Error";
+	long int result, value, size, index;
 
-	memory = malloc(sizeof(int *) * height);
-	if (memory == NULL || width <= 0 || height <= 0)
+	if (argc != 3 || !check(argv[1]) || !check(argv[2]))
 	{
-		return (NULL);
+		printm(s);
+		exit(98);
 	}
-	for (index = 0; index < height; index++)
-	{
-		memory[index] = malloc(sizeof(int) * width);
+	result = atoi(argv[1]) * atoi(argv[2]);
+	value = result;
 
-		if (memory[index] == NULL)
+	for (size = 0; result / 10; size++)
+	{
+		result = result / 10;
+	}
+	size++;
+	memory = malloc(sizeof(char) * size + 1);
+	if (memory == NULL)
+	{
+		return (1);
+	}
+	size--;
+	for (index = 0; index <= size; index++)
+	{
+		memory[size - index] = (value % 10 + '0');
+		value = value / 10;
+	}
+	memory[index] = '\n';
+	printm(memory);
+	free(memory);
+	return (0);
+}
+
+/**
+ * printm - print message from pointer.
+ * @str: string to print.
+ *
+ * Return: None.
+ */
+void printm(char *str)
+{
+	int index;
+
+	for (index = 0; str[index]; index++)
+	{
+		_putchar(str[index]);
+	}
+	_putchar('\0');
+}
+
+/**
+ * check - check if number.
+ * @num: Numer to check.
+ *
+ * Return: None.
+ */
+int check(char *num)
+{
+	int index, rsp = 1;
+
+	for (index = 0; num[index]; index++)
+	{
+		if (num[index] < 48 || num[index] > 57)
 		{
-			for (; index >= 0; index--)
-			{
-				free(memory[index]);
-			}
-			free(memory);
-			return (NULL);
+			rsp = 1;
+			break;
 		}
 	}
-
-	for (index = 0; index < height; index++)
-	{
-		for (index_j = 0; index_j < width; index_j++)
-		{
-			memory[index][index_j] = 0;
-		}
-	}
-	return (memory);
+	return (rsp);
 }
