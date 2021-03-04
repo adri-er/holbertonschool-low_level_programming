@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
 	memory = malloc(sizeof(char) * size + 1);
 	if (memory == NULL)
 	{
-		return (1);
+		printm(s);
+		exit(98);
 	}
 	size--;
 	for (index = 0; index <= size; index++)
