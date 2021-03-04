@@ -3,43 +3,40 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - returns a pointer to a 2 dimensional array of integers.
- * @width: width of the array of integers done.
- * @height: height of the array of integers.
+ * _realloc - reallocatesmemory block using maloc and free.
+ * @ptr: ponter to the memory.
+ * @old_size: size allocated por ptr.
+ * @new_size: new size of memory in bytes.
  *
- * Return: NULL on failure or if w and h are 0 or pointer to array.
+ * Return: pointer to new memory allocation.
  */
-int **alloc_grid(int width, int height)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	int index, index_j;
-	int **memory;
+	unsigned int index;
+	char *memory;
 
-	memory = malloc(sizeof(int *) * height);
-	if (memory == NULL || width <= 0 || height <= 0)
+	if (new_size == old_size)
+	{
+		return (ptr);
+	}
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	memory = malloc(new_size);
+	if (memory == NULL)
 	{
 		return (NULL);
 	}
-	for (index = 0; index < height; index++)
+	if (ptr == NULL)
 	{
-		memory[index] = malloc(sizeof(int) * width);
-
-		if (memory[index] == NULL)
-		{
-			for (; index >= 0; index--)
-			{
-				free(memory[index]);
-			}
-			free(memory);
-			return (NULL);
-		}
+		return (memory);
 	}
-
-	for (index = 0; index < height; index++)
+	for (index = 0; index < old_size; index++)
 	{
-		for (index_j = 0; index_j < width; index_j++)
-		{
-			memory[index][index_j] = 0;
-		}
+		memory[index] = *((char *)ptr + index);
 	}
+	free(ptr);
 	return (memory);
 }
