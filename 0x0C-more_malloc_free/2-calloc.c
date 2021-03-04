@@ -10,8 +10,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *memory;
-	/*unsigned int index;*/
+	char *memory;
+	unsigned int index;
 
 	if (nmemb <= 0 || size <= 0)
 	{
@@ -23,12 +23,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	/*
-	 *for (index = 0; index < (nmemb * size); index++)
-	 *{
-	 *	memory[index] = 0;
-	 *}
-	*/
-
+	for (index = 0; index < (nmemb * size); index++)
+	{
+		memory[index] = 0;
+	}
 	return (memory);
 }
