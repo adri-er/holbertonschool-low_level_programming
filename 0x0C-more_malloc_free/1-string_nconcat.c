@@ -49,6 +49,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			memory[index] = s2[index - len_s1];
 		}
 	}
-	memory[index + 1] = '\0';
+	memory[index] = '\0';
 	return (memory);
 }
