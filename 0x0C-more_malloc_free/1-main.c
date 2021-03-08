@@ -10,9 +10,16 @@
 int main(void)
 {
 	char *concat;
+	int index;
 
 	concat = string_nconcat("Holberton ", "School !!!", 1);
 	printf("%s\n", concat);
+
+	for (index = 0; concat[index]; index++)
+	{
+	}
+
+	printf("%d", index);
 	free(concat);
 	return (0);
 }
