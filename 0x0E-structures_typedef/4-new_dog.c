@@ -68,7 +68,7 @@ char *_strdup(char *str)
 			memory[index] = str[index];
 		}
 		length--;
-		memory[lenght] = '\0';
+		memory[length] = '\0';
 	}
 	else
 	{
