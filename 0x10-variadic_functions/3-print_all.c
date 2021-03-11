@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include "variadic_functions.h"
 
 /**
  * print_all - function that prints anything.
@@ -15,7 +14,7 @@ void print_all(const char * const format, ...)
 	unsigned int index = 0;
 
 	va_start(all_entries, format);
-	while (format[index])
+	while (format[index] && format != NULL)
 	{
 		letter = format[index];
 		switch (letter)
