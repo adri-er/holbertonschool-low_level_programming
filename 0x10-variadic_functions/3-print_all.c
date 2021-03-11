@@ -13,8 +13,12 @@ void print_all(const char * const format, ...)
 	char letter, *s;
 	unsigned int index = 0;
 
+	while (format == NULL)
+	{
+		printf("\n");
+		return; }
 	va_start(all_entries, format);
-	while (format[index] && format != NULL)
+	while (format[index])
 	{
 		letter = format[index];
 		switch (letter)
@@ -40,9 +44,7 @@ void print_all(const char * const format, ...)
 		}
 		if (format[index + 1] && (letter == 'c'
 || letter == 's' || letter == 'i' || letter == 'f'))
-		{
 			printf(", ");
-		}
 		index++;
 	}
 	printf("\n");
