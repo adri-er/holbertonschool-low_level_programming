@@ -16,11 +16,6 @@ int main(int argc, char *argv[])
 	int num_2 = atoi(argv[3]);
 	char operator = *argv[2];
 
-	if (num_2 == 0 && (operator == '/' || operator == '%'))
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -31,6 +26,11 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(99);
+	}
+	if (num_2 == 0 && (operator == '/' || operator == '%'))
+	{
+		printf("Error\n");
+		exit(100);
 	}
 	printf("%d\n", p(num_1, num_2));
 	return (0);
