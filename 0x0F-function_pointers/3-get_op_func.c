@@ -23,7 +23,7 @@ int (*get_op_func(char *s))(int, int)
 ? 1 : ((s[0] == (ops[2].op)[0]) ? 2 : ((s[0] == (ops[3].op)[0])
 ? 3 : ((s[0] == (ops[4].op)[0]) ? 4 : 5)))));
 
-	if (i == 5)
+	if (i == 5 || s == NULL)
 	{
 		return (NULL);
 	}
