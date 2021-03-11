@@ -21,9 +21,8 @@ int (*get_op_func(char *s))(int, int)
 
 	if (s != NULL)
 	{
-		i = ((s[0] == (ops[0].op)[0]) ? 0 : ((s[0] == (ops[1].op)[0])
-						     ? 1 : ((s[0] == (ops[2].op)[0]) ? 2 : ((s[0] == (ops[3].op)[0])
-											    ? 3 : ((s[0] == (ops[4].op)[0]) ? 4 : 5)))));
+		i = ((s == (ops[0].op)) ? 0 : ((s == (ops[1].op)) ? 1 : ((s == (ops[2].op))
+? 2 : ((s == (ops[3].op)) ? 3 : ((s == (ops[4].op)) ? 4 : 5)))));
 		return (ops[i].f);
 	}
 	return (NULL);
