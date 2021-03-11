@@ -19,13 +19,12 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i;
 
-	i = ((s[0] == (ops[0].op)[0]) ? 0 : ((s[0] == (ops[1].op)[0])
-? 1 : ((s[0] == (ops[2].op)[0]) ? 2 : ((s[0] == (ops[3].op)[0])
-? 3 : ((s[0] == (ops[4].op)[0]) ? 4 : 5)))));
-
-	if (i == 5 || s == NULL)
+	if (s != NULL)
 	{
-		return (NULL);
+		i = ((s[0] == (ops[0].op)[0]) ? 0 : ((s[0] == (ops[1].op)[0])
+						     ? 1 : ((s[0] == (ops[2].op)[0]) ? 2 : ((s[0] == (ops[3].op)[0])
+											    ? 3 : ((s[0] == (ops[4].op)[0]) ? 4 : 5)))));
+		return (ops[i].f);
 	}
-	return (ops[i].f);
+	return (NULL);
 }
