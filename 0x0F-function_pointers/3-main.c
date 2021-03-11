@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	if (argc != 4 || (num_1 == 0 && argv[1][0] != '0') || (num_2 == 0 && argv[3][0] != '0'))
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
