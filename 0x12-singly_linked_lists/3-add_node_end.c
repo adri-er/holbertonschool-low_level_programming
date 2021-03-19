@@ -15,7 +15,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	int index;
 	char *str_copy;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 	{
 		return (NULL);
 	}
