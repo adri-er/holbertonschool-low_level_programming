@@ -15,12 +15,12 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new_node;
 	char *str_duplicate = strdup(str);
 
-	if (head == NULL)
+	if (head == NULL || str_duplicate == NULL)
 	{
 		return (NULL);
 	}
 	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL || str_duplicate == NULL)
+	if (new_node == NULL)
 	{
 		return (NULL);
 	}
