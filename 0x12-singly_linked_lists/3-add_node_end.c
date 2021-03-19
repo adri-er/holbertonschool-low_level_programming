@@ -13,9 +13,9 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node, *last = *head;
 	int index;
-	char *str_copy;
+	char *str_copy = strdup(str);
 
-	if (head == NULL)
+	if (head == NULL || str_copy == NULL)
 	{
 		return (NULL);
 	}
@@ -24,7 +24,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	str_copy = strdup(str);
 	new_node->str = str_copy;
 	for (index = 0; str_copy[index]; index++)
 	{
