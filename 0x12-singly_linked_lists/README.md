@@ -9,3 +9,6 @@ In the directory files with the following use are found:
 3- adds a new node at the end of a list_t list.
 
 4- frees a list_t list.
+
+5- prints the message "You're beat! and yet, you must allow,\nI bore my house upon my back!\n" before the main executes.
+
