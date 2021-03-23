@@ -19,7 +19,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		return (-1);
 	}
-	while (position && current_index < index)
+	while (position->next && current_index < index)
 	{
 		current_index++;
 		position = position->next;
