@@ -1,3 +1,5 @@
+#include "lists.h"
+
 /**
  * find_listint_loop - detects where the loop starts.
  * @head: the head of the list to check if there is loop.
