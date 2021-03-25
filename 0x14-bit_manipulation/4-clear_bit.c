@@ -14,9 +14,12 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		*n = *n - (1 << index);
 		return (1);
 	}
+	else if (get_bit(*n, index) == 0)
+	{
+		return (1);
+	}
 	return (-1);
 }
-
 
 /**
  * get_bit - returns the value of a bit at a given index.
@@ -27,22 +30,17 @@ int clear_bit(unsigned long int *n, unsigned int index)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int length = 0;
 
-	while (n >> length)
-	{
-		length++;
-	}
-	if (index > (length - 1))
+	if (index > 63)
 	{
 		return (-1);
 	}
-	if (((n >> index) ^ 1) == ((n >> index) + 1))
+	if ((n >> index) & 1)
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
