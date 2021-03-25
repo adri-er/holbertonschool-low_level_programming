@@ -13,11 +13,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int length_n = 0, length_m = 0, flip = 0;
 	long int maximum = 0;
 
-	while (n >> length_n)
+	while (n >> length_n && length_n < 64)
 	{
 		length_n++;
 	}
-	while (m >> length_m)
+	while (m >> length_m && length_m < 64)
 	{
 		length_m++;
 	}
@@ -29,20 +29,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	}
 	while (maximum >= 0)
 	{
-		if (get_bit(n, maximum) == -1 && get_bit(m, maximum) == 1)
+		if (get_bit(n, maximum) != get_bit(m, maximum))
 		{
 			flip++;
-		}
-		else if (get_bit(m, maximum) == -1 && get_bit(n, maximum) == 1)
-		{
-			flip++;
-		}
-		else if (get_bit(n, maximum) != -1 && get_bit(m, maximum) != -1)
-		{
-			if (get_bit(n, maximum) != get_bit(m, maximum))
-			{
-				flip++;
-			}
 		}
 		maximum--;
 	}
@@ -58,22 +47,17 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int length = 0;
 
-	while (n >> length)
-	{
-		length++;
-	}
-	if (index > (length - 1))
+	if (index > 63)
 	{
 		return (-1);
 	}
-	if (((n >> index) ^ 1) == ((n >> index) + 1))
+	if ((n >> index) & 1)
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
