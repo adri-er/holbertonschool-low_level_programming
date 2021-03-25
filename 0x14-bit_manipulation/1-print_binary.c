@@ -8,22 +8,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int copy = n;
-	long int length = 0, index = 0;
+	long int length = 0;
 
 	if (n == 0 || n == 1)
 	{
 		_putchar(n + '0');
 		return;
 	}
-	while (copy >> index)
+	while (n >> length)
 	{
-		index++;
+		length++;
 	}
-	length = index - 1;
-	while (length >= 0)
+	length--;
+	while (length != 0)
 	{
-		if (((copy >> length) ^ 1) == ((copy >> length) + 1))
+		if (((n >> length) ^ 1) == ((n >> length) + 1))
 		{
 			_putchar('0');
 		}
