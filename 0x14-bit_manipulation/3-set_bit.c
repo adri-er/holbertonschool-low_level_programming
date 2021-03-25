@@ -9,7 +9,7 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (get_bit(*n,index) == 0)
+	if (get_bit(*n, index) == 0)
 	{
 		*n = *n + (1 << index);
 	}
@@ -25,22 +25,22 @@ int set_bit(unsigned long int *n, unsigned int index)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-        unsigned int length = 0;
+	unsigned int length = 0;
 
-        while (n >> length)
-        {
-                length++;
-        }
-        if (index > (length - 1))
-        {
-                return (-1);
-        }
-        if (((n >> index) ^ 1) == ((n >> index) + 1))
-        {
-                return (0);
-        }
-        else
-        {
-                return (1);
-        }
+	while (n >> length)
+	{
+		length++;
+	}
+	if (index > (length - 1))
+	{
+		return (-1);
+	}
+	if (((n >> index) ^ 1) == ((n >> index) + 1))
+	{
+		return (0);
+	}
+	else
+	{
+		return (1);
+	}
 }
