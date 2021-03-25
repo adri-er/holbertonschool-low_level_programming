@@ -8,8 +8,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int index = 0, copy = n;
-	int length = 0;
+	unsigned long int copy = n;
+	long int length = 0, index = 0;
 
 	if (n == 0 || n == 1)
 	{
