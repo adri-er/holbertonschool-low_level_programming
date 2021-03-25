@@ -17,14 +17,14 @@ void print_binary(unsigned long int n)
 		_putchar(n + '0');
 		return;
 	}
-	while (copy >> index)
+	while ((copy >> index) && (index < 64))
 	{
 		index++;
 	}
 	length = index - 1;
 	while (length >= 0)
 	{
-		if (((copy >> length) & 1))
+		if ((copy >> length) & 1)
 		{
 			_putchar('1');
 		}
