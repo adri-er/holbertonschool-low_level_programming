@@ -18,33 +18,32 @@ int main(int argc, char *argv[])
 	{		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	file_descriptor_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
+	file_descriptor_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_descriptor_to == -1)
 	{		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		close(file_descriptor_from);
 		exit(99);
 	}	status = read(file_descriptor_from, buffer, 1024);
 	if (status == -1 || status <= 0)
-	{		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		close(file_descriptor_to);
-		close(file_descriptor_from);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}	status = write(file_descriptor_to, buffer, status);
 	if (status == -1)
-	{		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		close(file_descriptor_to);
-		close(file_descriptor_from);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
-	}	status = close(file_descriptor_from);
+	}
+	status = close(file_descriptor_from);
 	status_2 = close(file_descriptor_to);
+	if (status_2 == -1)
+	{		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_descriptor_to);
+		exit(100);
+	}
 	if (status == -1)
 	{		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_descriptor_from);
 		exit(100);
 	}
-	if (status_2 == -1)
-	{		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_descriptor_to);
-		exit(100);
-	}	return (0);
+	return (0);
 }
 
 /**
