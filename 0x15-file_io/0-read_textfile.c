@@ -1,9 +1,4 @@
 #include "holberton.h"
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdlib.h>
 
 /**
  * read_textfile - reads text file and prints to the POSIX standard output.
@@ -21,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	if (filename == NULL || letters == 0)
+	if (filename == NULL)
 	{
 		free(buffer_read);
 		return (0);
@@ -39,8 +34,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(file_descriptor);
 		return (0);
 	}
-	answer_2 = write(STDOUT_FILENO, buffer_read, letters);
-	if (answer_2 == -1 || answer_2 != (int)letters)
+	answer_2 = write(STDOUT_FILENO, buffer_read, answer);
+	if (answer_2 == -1 || answer_2 != answer)
 	{
 		close(file_descriptor);
 		free(buffer_read);
