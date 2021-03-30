@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int file_descriptor_to, file_descriptor_from, status;
+	int file_descriptor_to, file_descriptor_from, status, status_2;
 	char buffer[1024];
 
 	check_arg(argc);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}	status = read(file_descriptor_from, buffer, 1024);
-	if (status == -1)
+	if (status == -1 || status <= 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -37,13 +37,13 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	status = close(file_descriptor_from);
+	status_2 = close(file_descriptor_to);
 	if (status == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_descriptor_from);
 		exit(100);
 	}
-	status = close(file_descriptor_to);
-	if (status == -1)
+	if (status_2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_descriptor_to);
 		exit(100);
