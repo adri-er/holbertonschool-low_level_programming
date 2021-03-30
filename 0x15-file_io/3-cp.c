@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int file_descriptor_to, file_descriptor_from, status, status_2;
 	char buffer[1024];
 
-	check_arg(argc);
+	check_arg(argc, argv[1]);
 	file_descriptor_from = open(argv[1], O_RDONLY);
 	if (file_descriptor_from == -1)
 	{		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -53,12 +53,17 @@ int main(int argc, char *argv[])
  *
  * Return: Always 1.
  */
-int check_arg(int argc)
+int check_arg(int argc, char *arg1)
 {
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
+	}
+	if (arg1 == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", arg1);
+		exit(98);
 	}
 	return (EXIT_SUCCESS);
 }
