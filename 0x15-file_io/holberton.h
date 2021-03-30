@@ -2,6 +2,10 @@
 #define HOLB_H
 
 #include <sys/types.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdlib.h>
 
 int _putchar(char);
 
