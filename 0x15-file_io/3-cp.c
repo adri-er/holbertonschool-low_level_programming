@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	status = dprintf(file_descriptor_to, "%s\n", buffer);
+	status = write(file_descriptor_to, buffer, 1024);
 	if (status == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -66,3 +66,4 @@ int check_arg(int argc)
 	}
 	return (1);
 }
+
