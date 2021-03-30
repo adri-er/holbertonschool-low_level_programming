@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int file_descriptor_to, file_descriptor_from, status;
 	char buffer[1024];
 
-	check_arg(argc);
+	check_arg(argc, argv[1], argv[2]);
 	file_descriptor_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	file_descriptor_from = open(argv[1], O_RDONLY);
 	if (file_descriptor_from == -1)
@@ -54,15 +54,26 @@ int main(int argc, char *argv[])
 /**
  * check_arg - checks if theres the correct amount of arguments.
  * @argc: number of arguments.
- *
+ * @arg1: pointer to first argument.
+ * @arg2: pointer to second argument.
  * Return: Always 1.
  */
-int check_arg(int argc)
+int check_arg(int argc, char *arg1, char *arg2)
 {
 	if (argc < 3)
 	{
 		dprintf(STDERR_FILENO, "%s", "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+	if (arg1 == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", arg1);
+		exit(98);
+	}
+	if (arg2 == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", arg2);
+                exit(99);
+        }
 	return (1);
 }
