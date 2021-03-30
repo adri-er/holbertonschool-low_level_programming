@@ -13,13 +13,13 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 
 	check_arg(argc);
-	file_descriptor_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	file_descriptor_from = open(argv[1], O_RDONLY);
 	if (file_descriptor_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+	file_descriptor_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	if (file_descriptor_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
