@@ -22,13 +22,14 @@ int main(int argc, char *argv[])
 	if (file_descriptor_to == -1)
 	{		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
-	}	status = read(file_descriptor_from, buffer, 1024);
-	if (status == -1 || status <= 0)
+	}
+	status = read(file_descriptor_from, buffer, 1024);
+	if (status == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
-	}	status = write(file_descriptor_to, buffer, status);
-	if (status == -1)
+	}	status_2 = write(file_descriptor_to, buffer, status);
+	if (status != status_2 || status_2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
