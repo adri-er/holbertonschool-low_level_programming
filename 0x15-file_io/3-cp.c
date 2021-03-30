@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int file_descriptor_to, file_descriptor_from, status, status_2;
 	char buffer[1024];
 
-	check_arg(argc, argv[1]);
+	check_arg(argc, argv[2]);
 	file_descriptor_from = open(argv[1], O_RDONLY);
 	if (file_descriptor_from == -1)
 	{		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -50,6 +50,7 @@ int main(int argc, char *argv[])
 /**
  * check_arg - checks if theres the correct amount of arguments.
  * @argc: number of arguments.
+ * @arg1: pointer to name of file to copy from.
  *
  * Return: Always 1.
  */
@@ -67,4 +68,3 @@ int check_arg(int argc, char *arg1)
 	}
 	return (EXIT_SUCCESS);
 }
-
