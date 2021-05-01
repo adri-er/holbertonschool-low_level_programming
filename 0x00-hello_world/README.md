@@ -11,6 +11,8 @@ With this project I had the first contact with some C basic features as _process
 | [4-puts.c](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x00-hello_world/4-puts.c) | Prints exactly "Programming is like building a multilingual puzzle, followed by a new line. |
 | [5-printf.c](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x00-hello_world/5-printf.c) | Prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line. |
 | [6-size.c](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x00-hello_world/6-size.c) | Prints the size of various types on the computer it is compiled and run on. |
+| [100-intel](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x00-hello_world/100-intel) | Script that generates the assembly code (Intel syntax) of a C code and save it in an output file. |
+| [101-quote.c](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x00-hello_world/101-quote.c) | Prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error. |
 
 ## Usage ⚙️
 
@@ -26,7 +28,7 @@ _The whole repository based on low level programming phase of Holberton School f
 
 ## Authors ✒️
 
-* **Adriana Echeverri** - [adri-er](https://github.com/adri-er)
+**Adriana Echeverri** - [adri-er](https://github.com/adri-er)
 
 
 This project was develpoed following the schedule of the foundations program in Holberton.
