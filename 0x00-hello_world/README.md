@@ -24,11 +24,11 @@ gcc -Wall -Werror -Wextra -pedantic --std=c89
 
 ## Built with 🛠️
 
-_The whole repository based on low level programming phase of Holberton School foundations is constructed in C_
+_The whole repository based on low level programming phase of Holberton School foundations is constructed in C and tested in `Ubuntu 14.06.6 LTS`._
 
 ## Authors ✒️
 
 **Adriana Echeverri** - [adri-er](https://github.com/adri-er)
 
 
-This project was develpoed following the schedule of the foundations program in Holberton.
+This project was developed following the schedule of the foundations program in Holberton.
