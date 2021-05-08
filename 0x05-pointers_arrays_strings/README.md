@@ -13,7 +13,6 @@ With this project I had my first approach to pointers, arrays and strings in C. 
 | [6-puts2.c](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x05-pointers_arrays_strings/6-puts2.c) | Prints every other character of a string, starting with the first character, followed by a new line. |
 | [7-puts_half.c](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x05-pointers_arrays_strings/7-puts_half.c) | Prints half of a string, followed by a new line. |
 | [8-print_array.c](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x05-pointers_arrays_strings/8-print_array.c) | Prints n elements of an array of integers, followed by a new line.
- |
 | [9-strcpy.c](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x05-pointers_arrays_strings/9-strcpy.c) | Copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest. |
 
 ## Usage ⚙️
