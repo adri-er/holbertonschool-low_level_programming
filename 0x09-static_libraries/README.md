@@ -47,10 +47,3 @@ _The whole repository based on low level programming phase of Holberton School f
 * **Adriana Echeverri** - [adri-er](https://github.com/adri-er)
 
 This project was developed following the schedule of the foundations program in Holberton.
-
-
-Contains two scripts: 
-
-0 - Create the static library named libholberton.a.
-
-1 - Creates a static library called liball.a from all the .c files that are in the current directory.
