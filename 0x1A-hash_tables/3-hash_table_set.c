@@ -22,9 +22,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_hash_node == NULL || new_hash_node->key == NULL ||
 		new_hash_node->value == NULL)
 	{
+		free(new_hash_node);
 		free(new_hash_node->key);
 		free(new_hash_node->value);
-		free(new_hash_node);
 		return (0);
 	}
 	if (ht->array[position] == NULL)
@@ -42,7 +42,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(new_hash_node->value);
 			free(hash_node_list->value);
 			free(new_hash_node);
-			hash_node_list->value = (char *)value;
+			ht->array[position]->value = (char *)value;
 			return (1);
 		}
 		hash_node_list = hash_node_list->next;
