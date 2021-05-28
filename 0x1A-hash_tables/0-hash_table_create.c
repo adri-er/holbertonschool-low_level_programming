@@ -9,7 +9,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *hash_table;
-	hash_node_t *array_nodes;
+	hash_node_t **array_nodes;
 
 	if (size <= 0)
 		return (NULL);
@@ -25,8 +25,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(hash_table);
 		return (NULL);
 	}
+
 	hash_table->size = size;
-	hash_table->array = &array_nodes;
-	/*REVISAR SI INICIALIZAR*/
+	hash_table->array = array_nodes;
 	return (hash_table);
 }
