@@ -3,6 +3,7 @@
 
 /*------------ libraries ---------------------- */
 #include <stdlib.h>
+#include <string.h>
 
 /*------------- structures --------------------*/
 
