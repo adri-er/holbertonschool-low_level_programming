@@ -17,14 +17,12 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	}
 	position = key_index((const unsigned char *)key, ht->size);
-	if (position >= ht->size || position < ht->size)
-		return (NULL);
 	hash_node_list = ht->array[position];
 	while (hash_node_list != NULL)
 	{
 		if (strcmp(hash_node_list->key, key) == 0)
 		{
-			return (ht->array[position]->value);
+			return (hash_node_list->value);
 		}
 		hash_node_list = hash_node_list->next;
 	}
