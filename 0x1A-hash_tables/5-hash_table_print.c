@@ -27,7 +27,7 @@ void hash_table_print(const hash_table_t *ht)
 			node_list = ht->array[i];
 			if (node_list->next != NULL)
 			{
-				printf("{");
+				/*printf("{");*/
 				while (node_list)
 				{
 					printf("'%s': '%s'", node_list->key, node_list->value);
@@ -35,7 +35,7 @@ void hash_table_print(const hash_table_t *ht)
 						printf(", ");
 					node_list = node_list->next;
 				}
-				printf("}");
+				/*printf("}");*/
 				if (printed < counter)
 					printf(", ");
 			}
