@@ -1,12 +1,13 @@
 # Low Level Programming 
 
-In this repository multiple folders containing topic aimed projects can be found. The target of these projects are: _Basic features of C, data structures, algorithms, linux and unix system programming._ In the next table can be found a relation between each folder and the topic related to it. 
+In this repository multiple folders containing topic aimed projects can be found. The target of these projects are: _Basic features of C, data structures (linked lists, hash tables), algorithms, linux and unix system programming._ In the next table can be found a relation between each folder and the topic related to it. 
 
 | Folder      | Topic |
 | ----------- | ----------- |
 | [0x00-hello_world](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x00-hello_world)      | Basic features of C programming       |
 | [0x01-variables_if_else_while](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x01-variables_if_else_while)   | C - Conditionals (if-else)        |
 | [0x02-functions_nested_loops](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x02-functions_nested_loops) | C - Iterative cylces (for-while) |
+| [0x03-debugging](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x03-debugging) | C - Debugging |
 | [0x04-more_functions_nested_loops](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x04-more_functions_nested_loops) | C - Iterative cylces (for-while) |
 | [0x05. C - Pointers, arrays and strings](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x05-pointers_arrays_strings) | C - Pointers, arrays and strings |
 | [0x06. C - More pointers, arrays and strings](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x06-pointers_arrays_strings) | C - Pointers, arrays and strings |
@@ -25,6 +26,8 @@ In this repository multiple folders containing topic aimed projects can be found
 | [0x14. C - Bit manipulation](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x14-bit_manipulation) | C - Bit manipulation |
 | [0x15. C - File I/O](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x15-file_io) | C - File I/O operations |
 | [0x17-doubly_linked_lists](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x17-doubly_linked_lists) | C - Linked lists |
+| [0x18-dynamic_libraries](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x18-dynamic_libraries) | C - Dynamic Libraries |
+| [0x1A-hash_tables](https://github.com/adri-er/holbertonschool-low_level_programming/tree/main/0x1A-hash_tables) | C - Hash Tables |
 
 
 ## Usage ⚙️
@@ -44,4 +47,4 @@ _The whole repository based on low level programming phase of Holberton School f
 * **Adriana Echeverri** - [adri-er](https://github.com/adri-er)
 
 
-This project was develpoed following the schedule of the foundations program in Holberton.
+This project was developed following the schedule of the foundations program in Holberton.
