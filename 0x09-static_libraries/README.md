@@ -1,6 +1,6 @@
 # Static libraries
 
-With this project I had a closer approach to static libraries, what are they, how does it work, how to create one and use it. As well, for this topic a blog was written, for more information about static libraries you can [access it here](https://2903.medium.com/overview-of-libraries-in-c-3418864f8860). In the next table can be found the files in the repo and a description.
+With this project I had a closer approach to static libraries, what are they, how does it work, how to create one and use it. As well, for this topic a blog was written, for more information about static libraries you can access it [↪️here](https://2903.medium.com/overview-of-libraries-in-c-3418864f8860). In the next table can be found the files in the repo and a description.
 
 | File name      | Description |
 | ----------- | ----------- |

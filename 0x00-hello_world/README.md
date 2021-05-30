@@ -2,6 +2,8 @@
 
 With this project I had the first contact with some C basic features as _processing of a C file to object code, printf and sizeof basic functionalities._ In the next table can be found the files in the repo and a description. 
 
+For more information about the topic, the blog created by the author about this project can be found [↪️here](https://2903.medium.com/steps-of-compilation-and-gcc-ba71c38972be).
+
 | File      | Description |
 | ----------- | ----------- |
 | [0-preprocessor](https://github.com/adri-er/holbertonschool-low_level_programming/blob/main/0x00-hello_world/0-preprocessor)      | Runs a C file through the preprocessor and save the result into another file. |
