@@ -2,10 +2,11 @@ CC=gcc
 SRC=main.c holberton.c
 OBJ=$(SRC:.c=.o)
 NAME=holberton
+
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-main.o: main.c m.h
+main.o: main.c
 	$(CC) -c main.c
 
 holberton.o: holberton.c m.h
