@@ -4,10 +4,8 @@ OBJ=$(SRC:.c=.o)
 NAME=holberton
 CFLAGS=-Wall -Werror -Wextra -pedantic
 
-all: $(OBJ)
+all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
-RM:
-	rm
 clean:
 	$(RM) -f *~
 	find . -maxdepth 1 -type f -executable -delete
