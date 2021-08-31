@@ -34,7 +34,7 @@ int binary_search(int *array, size_t size, int value)
 	else if (array[pos_divide] > value)
 	{
 		print_array(array, size);
-		return (binary_search(array, pos_divide, value));
+		return (binary_search(array, pos_divide - 1, value));
 	}
 	else
 	{
