@@ -10,38 +10,38 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-    int pos_divide;
+	int pos_divide;
 
-    if (array == NULL)
-        return -1;
+	if (array == NULL)
+		return -1;
 
-    printf("Searching in array: ");
-    print_array(array, size);
-
-    pos_divide = size / 2;
-    if (pos_divide == 0)
-    {
-        if (array[pos_divide] == value)
-            return (pos_divide);
-        else
-            return (-1);
-    }
-    else if (array[pos_divide] < value)
-    {
-        if (size % 2 == 0)
-            return (binary_search(array + pos_divide, pos_divide, value));
-        else
-            return (binary_search(array + pos_divide + 1, pos_divide, value));
-    }
-    else if (array[pos_divide] > value)
-    {
-        return (binary_search(array, pos_divide - 1, value));
-    }
-    else
-    {
-        return (binary_search(array + pos_divide, pos_divide, value));
-    }
-    return (-1);
+	pos_divide = size / 2;
+	if (pos_divide == 0)
+	{
+		if (array[pos_divide] == value)
+			return (pos_divide);
+		else
+			return (-1);
+	}
+	else if (array[pos_divide] < value)
+	{
+		print_array(array, size);
+		if (size % 2 == 0)
+			return (binary_search(array + pos_divide, pos_divide, value));
+		else
+			return (binary_search(array + pos_divide + 1, pos_divide, value));
+	}
+	else if (array[pos_divide] > value)
+	{
+		print_array(array, size);
+		return (binary_search(array, pos_divide, value));
+	}
+	else
+	{
+		print_array(array, size);
+		return (binary_search(array + pos_divide, pos_divide, value));
+	}
+	return (-1);
 }
 
 /**
@@ -53,16 +53,16 @@ int binary_search(int *array, size_t size, int value)
  */
 void print_array(int *array, size_t size)
 {
-    size_t index = 0;
+	size_t index = 0;
 
-    while (index < size)
-    {
-        if (index == size - 1)
-            printf("%d\n", array[index]);
+	printf("Searching in array: ");
+	while (index < size)
+	{
+		if (index == size - 1)
+			printf("%d\n", array[index]);
 
-        else
-            printf("%d, ", array[index]);
-
-        index++;
-    }
+		else
+			printf("%d, ", array[index]);
+		index++;
+	}
 }
