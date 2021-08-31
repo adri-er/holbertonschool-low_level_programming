@@ -13,7 +13,7 @@ int binary_search(int *array, size_t size, int value)
 	int pos_divide;
 
 	if (array == NULL)
-		return -1;
+		return (-1);
 
 	pos_divide = size / 2;
 	if (pos_divide == 0)
