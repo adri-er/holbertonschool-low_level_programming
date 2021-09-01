@@ -15,6 +15,9 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
+	printf("Searching in array: ");
+	print_array(array, size);
+
 	pos_divide = size / 2;
 	if (pos_divide == 0)
 	{
@@ -25,7 +28,6 @@ int binary_search(int *array, size_t size, int value)
 	}
 	else if (array[pos_divide] < value)
 	{
-		print_array(array, size);
 		if (size % 2 == 0)
 			return (binary_search(array + pos_divide, pos_divide, value));
 		else
@@ -33,12 +35,10 @@ int binary_search(int *array, size_t size, int value)
 	}
 	else if (array[pos_divide] > value)
 	{
-		print_array(array, size);
 		return (binary_search(array, pos_divide - 1, value));
 	}
 	else
 	{
-		print_array(array, size);
 		return (binary_search(array + pos_divide, pos_divide, value));
 	}
 	return (-1);
@@ -55,7 +55,6 @@ void print_array(int *array, size_t size)
 {
 	size_t index = 0;
 
-	printf("Searching in array: ");
 	while (index < size)
 	{
 		if (index == size - 1)
@@ -63,6 +62,7 @@ void print_array(int *array, size_t size)
 
 		else
 			printf("%d, ", array[index]);
+
 		index++;
 	}
 }
