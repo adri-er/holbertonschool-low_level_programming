@@ -7,6 +7,6 @@
 int linear_search(int *, size_t, int);
 int binary_search(int *, size_t, int);
 void print_array(int *, size_t);
-int binary_search_position(int *, size_t, int, int);
+int jump_search(int *array, size_t size, int value);
 
 #endif /* search_alg */
